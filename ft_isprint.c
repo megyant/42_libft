@@ -1,9 +1,9 @@
 
 #include "libft.h"
 
-int	ft_isdigit(char c)
+int	ft_isprint(char c)
 {
-	if (c >= '0' && c <= '9')
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
