@@ -12,7 +12,7 @@ int	ft_isdigit(char c);
 int	ft_isprint(char c);
 
 // strings
-int	ft_strlen(char *str);
+size_t	ft_strlen(char *str);
 
 // Memmory management
 void	*ft_memset(void *s, int c, size_t n);

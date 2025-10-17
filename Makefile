@@ -3,28 +3,29 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
+#    By: megyant <megyant@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/16 09:43:34 by mbotelho          #+#    #+#              #
-#    Updated: 2025/10/16 10:30:26 by mbotelho         ###   ########.fr        #
+#    Updated: 2025/10/17 15:40:22 by megyant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FT = ft_
 SRCS = $(FT)isalpha.c \
-	   $(FT)ft_isdigit.c \
+	   $(FT)isdigit.c \
 	   $(FT)isalnum.c \
 	   $(FT)isascii.c \
-	   $(FT)isprint.c
+	   $(FT)isprint.c \
+	   $(FT)strlen.c \
+	   $(FT)memset.c
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 OBJS = $(SRCS:.c=.o)
-INC_DIRS = 
 RM = rm -f
 
 .c.o:
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I $(INC_DIRS)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
 	ar rc $(NAME) $(OBJS)
