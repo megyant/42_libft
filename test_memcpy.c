@@ -16,8 +16,9 @@ int	main(void)
     }
     printf("\n");
 
-    ft_memcpy(dest, src, 10);
+    ft_memmove(dest, src, 10);
     i = 0;
+    printf("Dest:\n");
     while (i < 10)
     {
         printf("%d ", dest[i]);

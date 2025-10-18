@@ -10,7 +10,8 @@ SRCS = $(FT)isalpha.c \
 	   $(FT)strlen.c \
 	   $(FT)memset.c \
 	   $(FT)bzero.c \
-       $(FT)memcpy.c
+       $(FT)memcpy.c \
+	   $(FT)memmove.c
 
 CC = cc
 FLAGS = -Wall -Werror -Wextra
