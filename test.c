@@ -1,11 +1,23 @@
 #include <stdio.h>
-size_t	ft_strlen(char *str);  // declare the function
 
-int main(void)
+void	*ft_memset(void *s, int c, size_t n);
+void ft_bzero(void *s, size_t n);
+
+int	main(void)
 {
-    const char *str = "Hello, 42!";
-    printf("Length: %zu\n", ft_strlen(str));
-    return 0;
-}
+	char	buffer[10];
+	int		i;
 
-//  cc -Wall -Wextra -Werror test.c libft.a -o test
+	ft_memset(buffer, 'A', 10);
+	printf("Before bzero:\n");
+	for (i = 0; i < 10; i++)
+		printf("%d ", buffer[i]);
+	printf("\n");
+
+	ft_bzero(buffer, 10);
+
+	printf("After bzero:\n");
+	for (i = 0; i < 10; i++)
+		printf("%d ", buffer[i]);
+	printf("\n");
+}
