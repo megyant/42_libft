@@ -9,7 +9,9 @@ SRCS = $(FT)isalpha.c \
 	   $(FT)isprint.c \
 	   $(FT)strlen.c \
 	   $(FT)memset.c \
-	   $(FT)bzero.c
+	   $(FT)bzero.c \
+       $(FT)memcpy.c
+
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 OBJS = $(SRCS:.c=.o)
