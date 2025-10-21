@@ -1,4 +1,14 @@
-
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
+#    Updated: 2025/10/21 10:46:00 by mbotelho         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
 
 NAME = libft.a
 FT = ft_
@@ -11,7 +21,12 @@ SRCS = $(FT)isalpha.c \
 	   $(FT)memset.c \
 	   $(FT)bzero.c \
        $(FT)memcpy.c \
-	   $(FT)memmove.c
+	   $(FT)memmove.c \
+	   $(FT)strlcpy.c \
+	   $(FT)strlcat.c \
+	   $(FT)strchr.c \
+	   $(FT)strrchr.c \
+	   $(FT)strncmp.c
 
 CC = cc
 FLAGS = -Wall -Werror -Wextra

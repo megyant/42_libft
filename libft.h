@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/20 11:30:24 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/21 10:45:26 by mbotelho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -5,14 +16,19 @@
 # include <stddef.h>
 
 // chars
-int	ft_isalnum(char c);
-int	ft_isalpha(char c);
-int	ft_isascii(char c);
-int	ft_isdigit(char c);
-int	ft_isprint(char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
+int		ft_isascii(int c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 
 // strings
-size_t	ft_strlen(char *str);
+size_t	ft_strlen(const char *str);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 // Memmory management
 void	*ft_memset(void *s, int c, size_t n);
