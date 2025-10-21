@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:14 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 11:20:52 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/21 12:06:29 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/21 12:32:22 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,34 @@
 /*#include <string.h>
 #include <stdio.h>*/
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	src_len;
 	size_t	i;
+	size_t	j;
 
-	src_len = ft_strlen(src);
 	i = 0;
-	if (size > 0)
+	if (little[0] == '\0')
+		return ((char *) big);
+	while (big[i] && i < len)
 	{
-		while (i < (size - 1) && src[i])
+		j = 0;
+		while (big[i + j] && big[i + j] == little[j] && (i + j < len))
 		{
-			dst[i] = src[i];
-			i++;
+			j++;
+			if (little[j] == '\0')
+				return ((char *) big + i);
 		}
-		dst[i] = '\0';
+		i++;
 	}
-	return (src_len);
+	return (0);
 }
+
 /*int main(void)
-{ // ft_strlcpy and ft_strlcat
-	const char *src = "Hello world!";
-	char dst[4] = "amor";
-	printf("len copied: %zu | dst: %s", ft_strlcpy(dst, src, 4), dst);
-	return 0;
+{
+	const char *largestring = "Foo Bar Baz";
+    const char *smallstring = "Bar";
+    char *ptr1;
+
+    ptr1 = ft_strnstr(largestring, smallstring, 15);
+	printf("sentence: %s\n", ptr1);
 }*/

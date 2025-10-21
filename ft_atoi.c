@@ -1,41 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 09:58:51 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 15:12:17 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/21 12:33:23 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/21 14:05:44 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>
-#include <string.h>*/
+/*#include <stdlib.h>
+#include <stdio.h>*/
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	char	*a;
+	int	i;
+	int	pn;
+	int	number;
 
 	i = 0;
-	a = NULL;
-	while ((unsigned char)s[i])
+	pn = 1;
+	number = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '+' && nptr[i + 1] != '-')
+		i++;
+	if (nptr[i] == '-')
 	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			a = (char *) &s[i];
+		pn = -pn;
 		i++;
 	}
-	if ((unsigned char)s[i] == (unsigned char)c)
-		a = (char *) &s[i];
-	return (a);
+	while (nptr[i] && ft_isdigit(nptr[i]))
+	{
+		number = number * 10 + (nptr[i] - '0');
+		i++;
+	}
+	return (number * pn);
 }
 
 /*int main(void)
 {
-	const char *str = "small";
-	int c = 'l';
-	printf("%s   %s", ft_strrchr(str, c), strrchr(str, c));
+	char *str = "   ++1234ab";
+	printf("%d\n%d", ft_atoi(str), atoi(str));
 	return (0);
 }*/

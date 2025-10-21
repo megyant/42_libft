@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 09:58:51 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 15:12:17 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/21 10:53:46 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/21 15:17:59 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>
-#include <string.h>*/
+#include <string.h>
+#include <stdio.h>
 
-char	*ft_strrchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
-	char	*a;
+	unsigned char	*ptr;
+	unsigned char	b;
+	size_t			i;
 
+	ptr = (unsigned char *) s;
+	b = (unsigned char)c;
 	i = 0;
-	a = NULL;
-	while ((unsigned char)s[i])
+	while (i < n)
 	{
-		if ((unsigned char)s[i] == (unsigned char)c)
-			a = (char *) &s[i];
+		if (ptr[i] == b)
+			return ((void *)&ptr[i]);
 		i++;
 	}
-	if ((unsigned char)s[i] == (unsigned char)c)
-		a = (char *) &s[i];
-	return (a);
+	return (NULL);
 }
 
 /*int main(void)
 {
-	const char *str = "small";
-	int c = 'l';
-	printf("%s   %s", ft_strrchr(str, c), strrchr(str, c));
-	return (0);
+	int c = 'b';
+	char buffer[] = {'a', 'b', 'c', 'd'};
+    printf("%s ", (char *)ft_memchr(buffer, c, 4));
+    printf("\n");
+	printf("%s ", (char *)memchr(buffer, c, 4));
+	printf("\n");
 }*/

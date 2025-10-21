@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:43:56 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:26:53 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,3 +24,17 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/*int	main(void)
+{ // ft_memset
+    char buffer[10];
+    int i = 0;
+
+    ft_memset(buffer, 'a', 10);
+    printf("Before ft_bzero:\n");
+    while (i < 10)
+    {
+        printf("%d ", buffer[i]);
+        i++;
+    }
+    printf("\n");*/

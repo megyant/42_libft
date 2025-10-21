@@ -6,11 +6,12 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 12:24:52 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:46:50 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:01:17 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
@@ -25,15 +26,15 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	i = 0;
 	if (size <= dst_len)
 		return (size + src_len);
-	while (src[i] && i > (size - (dst_len - 1)))
+	while (src[i] && i < (size - (dst_len + 1)))
 	{
-		dst[dst_len] = src[i];
-		dst_len++;
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dst[dst_len] = '\0';
+	dst[dst_len + i] = '\0';
 	return (total_len);
 }
+
 /*int main(void)
 { // ft_strlcpy and ft_strlcat
 	const char *src = "Hello world!";

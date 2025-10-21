@@ -6,11 +6,12 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:54:16 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/21 14:03:42 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -33,13 +34,21 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		while (i++ < n)
+		while (++i < n)
 		{
 			ptrd[i] = ptrs[i];
 		}
 	}
 	return (dest);
 }
+/*int main(void)
+{
+	char	src[] = "lorem ipsum dolor sit amet";
+	char *dest = src + 1;
+	if (src != ft_memmove(src, dest, 8))
+        printf("dest's adress was not returned\n");
+    printf("%s", dest);
+}*/
 
 /*int	main(void)
 { //ft_memset && ft_memmove

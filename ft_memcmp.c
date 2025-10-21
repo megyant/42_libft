@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 10:35:17 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 12:03:56 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/21 11:49:05 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/21 15:21:31 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdio.h>
-#include <string.h>*/
+#include <string.h>
+#include <stdio.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t	i;
-	int		diff;
+	const unsigned char	*ptr1;
+	const unsigned char	*ptr2;
+	size_t				i;
+	int					diff;
 
+	ptr1 = (const unsigned char *) s1;
+	ptr2 = (const unsigned char *) s2;
 	i = 0;
 	diff = 0;
-	while (((unsigned char)s1[i] || (unsigned char)s2[i]) && i < n)
+	while (i < n)
 	{
-		if (s1[i] != s2[i])
+		if (ptr1[i] != ptr2[i])
 		{
-			diff = (unsigned char)s1[i] - (unsigned char)s2[i];
+			diff = ptr1[i] - ptr2[i];
 			break ;
 		}
 		i++;
@@ -35,8 +39,11 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 /*int main(void)
 {
-	const char *s1 = "Hello world";
-	const char *s2 = "Hello ";
-	printf("%d    %d", ft_strncmp(s1, s2, 10), strncmp(s1, s2, 10));
-	return 0;
+	char buffer1[] = {'a', 'b', 'c'};
+	char buffer2[] = {'a', 'b', 'c'};
+	
+	printf("%d", ft_memcmp(buffer1, buffer2, 3));
+	printf("\n");
+	printf("%d", memcmp(buffer1, buffer2, 3));
+	printf("\n");
 }*/
