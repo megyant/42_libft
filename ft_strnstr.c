@@ -6,13 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:06:29 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 12:32:22 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 12:04:53 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <string.h>
-#include <stdio.h>*/
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

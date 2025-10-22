@@ -6,7 +6,7 @@
 #    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2025/10/21 12:55:58 by mbotelho         ###   ########.fr        #
+#    Updated: 2025/10/22 17:15:20 by mbotelho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,10 @@ SRCS = $(FT)isalpha.c \
 	   $(FT)toupper.c \
 	   $(FT)memcmp.c \
 	   $(FT)strnstr.c \
-	   $(FT)atoi.c
+	   $(FT)atoi.c \
+	   $(FT)calloc.c \
+	   $(FT)strdup.c \
+	   $(FT)substr.c
 
 CC = cc
 FLAGS = -Wall -Werror -Wextra

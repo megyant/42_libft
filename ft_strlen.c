@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:44:38 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:44:51 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,8 @@ size_t	ft_strlen(const char *str)
 		i++;
 	return (i);
 }
+
+/*int main(void)
+{
+	printf("%d", ft_strlen("Hello"));
+}*/

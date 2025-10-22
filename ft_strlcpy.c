@@ -6,13 +6,11 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:14 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 11:20:52 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 08:48:56 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <string.h>
-#include <stdio.h>*/
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

@@ -1,26 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:29:39 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/22 08:15:09 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/22 16:04:22 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/22 16:45:25 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int c)
+char	*ft_strdup(const char *s)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	char	*dest;
+	size_t	s_len;
+	size_t	i;
+
+	s_len = ft_strlen(s);
+	dest = malloc((s_len + 1) * sizeof(char));
+	if (dest == NULL)
+		return (NULL);
+	i = -1;
+	while (++i < s_len)
+		dest[i] = s[i];
+	dest[i] = '\0';
+	return (dest);
 }
 
-/*int	main(void)
+/*int main(void)
 {
-	printf("%d", ft_isalpha('A'))
+	const char *s = "a";
+	char *dest1 = ft_strdup(s);
+	char *dest2 = strdup(s);
+
+	printf("Mine:     %s\nOriginal: %s\n", dest1, dest2);
+	free (dest1);
+	free (dest2);
 	return (0);
 }*/

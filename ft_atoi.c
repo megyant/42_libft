@@ -6,13 +6,12 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:33:23 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 14:05:44 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 12:18:24 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*#include <stdlib.h>
-#include <stdio.h>*/
+//#include <stdlib.h>
 
 int	ft_atoi(const char *nptr)
 {
@@ -42,7 +41,7 @@ int	ft_atoi(const char *nptr)
 
 /*int main(void)
 {
-	char *str = "   ++1234ab";
+	char *str = "   +1234ab";
 	printf("%d\n%d", ft_atoi(str), atoi(str));
 	return (0);
 }*/

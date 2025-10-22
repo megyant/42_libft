@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:28:23 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:47:56 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 08:16:35 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,3 +20,8 @@ int	ft_tolower(int c)
 	}
 	return (c);
 }
+
+/*int main(void)
+{
+	printf("%d", ft_tolower("Hello"));
+}*/

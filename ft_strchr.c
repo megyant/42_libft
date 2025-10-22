@@ -6,17 +6,15 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:35:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 15:10:49 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:46:33 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])

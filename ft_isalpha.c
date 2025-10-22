@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 09:39:57 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:42:17 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/22 09:02:54 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,9 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+
+/*int	main(void)
+{
+	printf("%d", ft_isalpha('A'))
+	return (0);
+}*/
