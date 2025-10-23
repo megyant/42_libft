@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
+#    By: megyant <megyant@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2025/10/22 17:15:20 by mbotelho         ###   ########.fr        #
+#    Updated: 2025/10/23 17:30:34 by megyant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,10 @@ SRCS = $(FT)isalpha.c \
 	   $(FT)atoi.c \
 	   $(FT)calloc.c \
 	   $(FT)strdup.c \
-	   $(FT)substr.c
+	   $(FT)substr.c \
+	   $(FT)strjoin.c \
+	   $(FT)strtrim.c \
+	   $(FT)split.c
 
 CC = cc
 FLAGS = -Wall -Werror -Wextra
