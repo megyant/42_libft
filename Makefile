@@ -6,7 +6,7 @@
 #    By: megyant <megyant@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2025/10/24 21:38:43 by megyant          ###   ########.fr        #
+#    Updated: 2025/10/24 22:16:27 by megyant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,8 @@ SRCS = $(FT)isalpha.c \
 	   $(FT)strtrim.c \
 	   $(FT)split.c \
 	   $(FT)itoa.c \
-	   $(FT)strmapi.c
+	   $(FT)strmapi.c \
+	   $(FT)striteri.c
 
 CC = cc
 FLAGS = -Wall -Werror -Wextra

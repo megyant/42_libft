@@ -6,7 +6,7 @@
 /*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:24 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/24 21:38:28 by megyant          ###   ########.fr       */
+/*   Updated: 2025/10/24 22:08:03 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void	ft_striteri(char *s, void(*f)(unsigned int, char *));
 
 // Memmory management
 void	*ft_memset(void *s, int c, size_t n);
