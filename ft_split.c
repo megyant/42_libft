@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/24 11:40:20 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/24 21:50:21 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	**ft_split(char const *s, char c)
 
 	if (!s)
 		return (NULL);
-	strf = calloc(word_count(s, c) + 1, sizeof(char *));
+	strf = ft_calloc(word_count(s, c) + 1, sizeof(char *));
 	if (!strf)
 		return (NULL);
 	i = 0;
