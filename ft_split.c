@@ -1,40 +1,110 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/24 08:48:00 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/24 11:40:20 by mbotelho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int word_count(char const *s, char c);
+static int	word_count(char const *s, char c);
+static char	*allocate_word(const char *s, char c);
+static void	*freeing(char **strf, int size);
 
 char	**ft_split(char const *s, char c)
 {
-	char **strf;
+	char	**strf;
+	size_t	i;
 
+	if (!s)
+		return (NULL);
 	strf = calloc(word_count(s, c) + 1, sizeof(char *));
 	if (!strf)
 		return (NULL);
-	
+	i = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		if (!*s)
+			break ;
+		strf[i] = allocate_word(s, c);
+		if (!strf[i])
+			return (freeing(strf, (i - 1)));
+		i++;
+		while (*s && *s != c)
+			s++;
+	}
+	strf[i] = NULL;
+	return (strf);
 }
 
 static int	word_count(char const *s, char c)
 {
 	size_t	in_word;
 	size_t	count;
-	size_t	i;
 
 	in_word = 0;
 	count = 0;
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] != c && in_word = 0)
+		if (*s != c && in_word == 0)
 		{
 			in_word = 1;
 			count++;
 		}
-		else if (s[i] == c)
+		else if (*s == c)
 		{
 			in_word = 0;
 		}
-		i++;
+		s++;
 	}
-	return(count);
+	return (count);
 }
 
-static char	*allocate_word
+static char	*allocate_word(const char *s, char c)
+{
+	char	*word;
+	size_t	len;
+	size_t	i;
+
+	len = 0;
+	i = 0;
+	while (s[len] && !(s[len] == c))
+		len++;
+	word = malloc((len + 1) * sizeof (char));
+	if (!word)
+		return (NULL);
+	while (i < len)
+	{
+		word[i] = s[i];
+		i++;
+	}
+	word[len] = '\0';
+	return (word);
+}
+
+static void	*freeing(char **strf, int size)
+{
+	while (size >= 0)
+		free(strf[size--]);
+	free(strf);
+	return (NULL);
+}
+
+/*int main(void)
+{
+	size_t i = 0;
+	char **strf = ft_split("ccHelloccWorldcc", 'c');
+	while(strf[i] != NULL)
+	{
+		printf("%s\n", strf[i]);
+		i++;
+	}
+	return (0);
+}*/
