@@ -6,20 +6,21 @@
 #    By: megyant <megyant@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2025/10/24 22:26:38 by megyant          ###   ########.fr        #
+#    Updated: 2025/10/25 18:17:27 by megyant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 FT = ft_
-SRCS = $(FT)isalpha.c   $(FT)isdigit.c   $(FT)isalnum.c   $(FT)isascii.c \
-	   $(FT)isprint.c   $(FT)strlen.c    $(FT)memset.c    $(FT)bzero.c \
-       $(FT)memcpy.c    $(FT)memmove.c   $(FT)strlcpy.c   $(FT)strlcat.c \
-	   $(FT)strchr.c    $(FT)strrchr.c   $(FT)strncmp.c   $(FT)memchr.c \
-	   $(FT)tolower.c   $(FT)toupper.c   $(FT)memcmp.c    $(FT)strnstr.c \
-	   $(FT)atoi.c      $(FT)calloc.c    $(FT)strdup.c    $(FT)substr.c \
-	   $(FT)strjoin.c   $(FT)strtrim.c   $(FT)split.c     $(FT)itoa.c \
-	   $(FT)strmapi.c   $(FT)striteri.c
+SRCS = $(FT)isalpha.c     $(FT)isdigit.c    $(FT)isalnum.c     $(FT)isascii.c \
+	   $(FT)isprint.c     $(FT)strlen.c     $(FT)memset.c      $(FT)bzero.c \
+       $(FT)memcpy.c      $(FT)memmove.c    $(FT)strlcpy.c     $(FT)strlcat.c \
+	   $(FT)strchr.c      $(FT)strrchr.c    $(FT)strncmp.c     $(FT)memchr.c \
+	   $(FT)tolower.c     $(FT)toupper.c    $(FT)memcmp.c      $(FT)strnstr.c \
+	   $(FT)atoi.c        $(FT)calloc.c     $(FT)strdup.c      $(FT)substr.c \
+	   $(FT)strjoin.c     $(FT)strtrim.c    $(FT)split.c       $(FT)itoa.c \
+	   $(FT)strmapi.c     $(FT)striteri.c   $(FT)putchar_fd.c  $(FT)putstr_fd.c \
+	   $(FT)putendl_fd.c  $(FT)putnbr_fd.c
 CC = cc
 FLAGS = -Wall -Werror -Wextra
 OBJS = $(SRCS:.c=.o)

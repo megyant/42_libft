@@ -6,7 +6,7 @@
 /*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:24 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/24 22:29:25 by megyant          ###   ########.fr       */
+/*   Updated: 2025/10/25 18:18:33 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include <stdio.h>
 # include <limits.h>
 
@@ -55,5 +56,11 @@ void	*ft_calloc(size_t nmeb, size_t size);
 
 // Numbers
 char	*ft_itoa(int n);
+
+// File descriptors
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
