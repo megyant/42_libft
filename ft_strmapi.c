@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/27 08:41:30 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/27 14:56:45 by mbotelho         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -7,7 +19,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*str;
 
 	s_len = ft_strlen(s);
-	str = malloc((s_len + 1) * sizeof(char *));
+	str = malloc((s_len + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	i = -1;
@@ -24,9 +36,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
  	if (i % 2 != 0 && c >= 'a' && c <= 'z')
         c -= 32;
     return c;
-}
+}*/
 
-int main(void)
+/*int main(void)
 {
 	char *str = ft_strmapi("Hello, world", alternate_case);
 	printf("%s\n", str);

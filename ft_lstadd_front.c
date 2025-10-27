@@ -1,31 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/27 08:41:09 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/27 08:41:10 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/27 14:59:48 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/27 15:03:25 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	size_t	i;
-
-	i = -1;
-	while (s[++i])
-	{
-		write(fd, &s[i], 1);
-	}
+	*new->next = *lst;
+	*lst = new;
 }
-
-/*int	main(void)
-{
-	ft_putstr_fd("Hello, world", 1);
-	ft_putstr_fd("\n", 1);
-	return (0);
-}*/

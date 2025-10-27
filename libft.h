@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:24 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/25 18:18:33 by megyant          ###   ########.fr       */
+/*   Updated: 2025/10/27 14:15:01 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,12 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <limits.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 // chars
 int		ft_isalnum(int c);
@@ -62,5 +68,9 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+// Lists
+
+t_list	*ft_lstnew(void *content);
 
 #endif

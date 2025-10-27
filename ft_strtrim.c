@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:14 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/24 08:48:15 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/27 10:34:45 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 
 	start = 0;
-	if (!s1 && !set)
+	if (!s1 || !set)
 		return (NULL);
 	end = ft_strlen(s1) - 1;
 	while (s1[start] != '\0' && is_equal(set, s1[start]))
