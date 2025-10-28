@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:18:34 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/27 15:00:44 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/28 09:50:59 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,20 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*arg;
+	t_list	*result;
 
-	arg = malloc(sizeof(t_list));
-	if (!arg)
+	result = malloc(sizeof(t_list));
+	if (!result)
 		return (NULL);
-	arg->content = content;
-	arg->next = NULL;
-	return (arg);
+	result->content = content;
+	result->next = NULL;
+	return (result);
 }
 
 /*int main(void)
 {
-	
+	t_list	*node = ft_lstnew("Hello, world!");
+	printf("%s\n", (char *)node->content);
+	free(node);
+	return (0);
 }*/

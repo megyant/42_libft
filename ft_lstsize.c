@@ -3,24 +3,42 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 15:04:26 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/27 15:08:26 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/28 17:18:14 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_lstsize(t_list *lst)
 {
-	int	i;
-	t_list *temp;
-	
+	int		i;
+	t_list	*temp;
+
 	i = 0;
 	temp = lst;
 	while (temp)
 	{
-		tmp = temp->next;
+		temp = temp->next;
 		i++;
 	}
 	return (i);
 }
+
+/*int main(void)
+{
+	t_list	*head = ft_lstnew("hello ");
+	t_list	*next = ft_lstnew("world");
+	t_list	*next2 = ft_lstnew("!");
+	head->next = next;
+	next->next = next2;
+	t_list	*tmp = head;
+	while (tmp != NULL)
+	{
+		printf("%s", (char *)head->content);
+		tmp = tmp->next;
+	}
+	printf("\n%d\n", ft_lstsize(head));
+}*/
