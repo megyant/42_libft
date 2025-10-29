@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 14:01:37 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/29 19:15:01 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ static void	*freeing(char **strf, int size)
 	return (NULL);
 }
 
-int main(void)
+/*int main(void)
 {
 	size_t i = 0;
 	char **strf = ft_split("ccHelloccWorldcc", 'c');
@@ -107,4 +107,4 @@ int main(void)
 		i++;
 	}
 	return (0);
-}
+}*/

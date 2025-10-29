@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:29:29 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/21 09:34:57 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/29 19:07:12 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,12 @@ void	ft_bzero(void *s, size_t n)
 }
 
 /*int	main(void)
-{ // ft_memset && ft_bzero
+{
+    printf("========Testing bzero========\n\n");
     char buffer[10];
     int i = 0;
 
+    printf("Aplying ft_memset(s, 'a', 10)\n\n");
     ft_memset(buffer, 'a', 10);
     printf("Before ft_bzero:\n");
     while (i < 10)
@@ -40,6 +42,7 @@ void	ft_bzero(void *s, size_t n)
 
     ft_bzero(buffer, 10);
     i = 0;
+    printf("After ft_bzero:\n");
     while (i < 10)
     {
         printf("%d ", buffer[i]);
