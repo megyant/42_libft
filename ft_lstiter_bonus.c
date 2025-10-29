@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/29 09:27:34 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 11:39:41 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (!lst)
+		return ;
+	while (lst != NULL)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
 }
 
-/*int main(void)
+/*void plus10(void *nb)
 {
-	printf("%zu", ft_strlen(NULL));
+	int *n = (int *)nb;
+	*n += 10;
+}
+
+int main(void)
+{
+	int a = 1;
+	t_list *head = ft_lstnew(&a);
+	printf("before: %d\n", *(int *)head->content);
+	ft_lstiter(head, plus10);
+	printf("after: %d\n", *(int *)head->content);
+	return (0);
 }*/

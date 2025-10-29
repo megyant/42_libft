@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/29 08:09:20 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 08:09:21 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+t_list	*ft_lstlast(t_list *lst)
 {
-	size_t	i;
+	t_list	*last;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (!lst)
+		return (NULL);
+	last = lst;
+	while (last->next)
+		last = last->next;
+	return (last);
 }
 
 /*int main(void)
 {
-	printf("%zu", ft_strlen(NULL));
+	t_list *head = ft_lstnew("Hello");
+	t_list *n1 = ft_lstnew("world");
+
+	head->next = n1;
+	printf("%s\n", (char *)ft_lstlast(head)->content);
+	return (0);
 }*/

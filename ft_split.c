@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/27 08:41:18 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/29 14:01:37 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,21 +46,21 @@ char	**ft_split(char const *s, char c)
 
 static int	word_count(char const *s, char c)
 {
-	size_t	in_word;
+	size_t	trigger;
 	size_t	count;
 
-	in_word = 0;
+	trigger = 0;
 	count = 0;
 	while (*s)
 	{
-		if (*s != c && in_word == 0)
+		if (*s != c && trigger == 0)
 		{
-			in_word = 1;
+			trigger = 1;
 			count++;
 		}
 		else if (*s == c)
 		{
-			in_word = 0;
+			trigger = 0;
 		}
 		s++;
 	}
@@ -97,7 +97,7 @@ static void	*freeing(char **strf, int size)
 	return (NULL);
 }
 
-/*int main(void)
+int main(void)
 {
 	size_t i = 0;
 	char **strf = ft_split("ccHelloccWorldcc", 'c');
@@ -107,4 +107,4 @@ static void	*freeing(char **strf, int size)
 		i++;
 	}
 	return (0);
-}*/
+}

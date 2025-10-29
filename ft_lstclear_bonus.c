@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/29 08:41:25 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 09:44:01 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	size_t	i;
+	t_list	*temp;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (!lst)
+		return ;
+	while (*lst != NULL)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
+	}
+	free(*lst);
+	*lst = NULL;
 }
 
 /*int main(void)
 {
-	printf("%zu", ft_strlen(NULL));
+	t_list *head = ft_lstnew(ft_strdup("Hello"));
+	t_list *n1 = ft_lstnew(ft_strdup("world"));
+	head->next = n1;
+	printf("bef  : %d\n", ft_lstsize(head));
+	ft_lstclear(&head, free);
+	printf("after: %d", ft_lstsize(head));
+	return (0);
 }*/

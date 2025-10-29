@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/29 08:09:25 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 10:58:30 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	del(lst->content);
+	free(lst);
 }
 
 /*int main(void)
 {
-	printf("%zu", ft_strlen(NULL));
+	char *str1 = ft_strdup("Hello");
+	char *str2 = ft_strdup("world");
+	t_list	*head = ft_lstnew(str1);
+	t_list	*n1 = ft_lstnew(str2);
+	head->next = n1;
+	printf("%d\n", ft_lstsize(head));
+	head->next = NULL;
+	ft_lstdelone(n1, free);
+	printf("%d\n", ft_lstsize(head));
 }*/

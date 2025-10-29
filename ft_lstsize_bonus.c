@@ -1,28 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/27 15:04:26 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 08:08:58 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+int	ft_lstsize(t_list *lst)
 {
-	size_t	i;
+	int		i;
+	t_list	*temp;
 
 	i = 0;
-	while (str[i])
+	temp = lst;
+	while (temp)
+	{
+		temp = temp->next;
 		i++;
+	}
 	return (i);
 }
 
 /*int main(void)
 {
-	printf("%zu", ft_strlen(NULL));
+	t_list	*head = ft_lstnew("hello ");
+	t_list	*next = ft_lstnew("world");
+	t_list	*next2 = ft_lstnew("!");
+	head->next = next;
+	next->next = next2;
+	t_list	*tmp = head;
+	while (tmp != NULL)
+	{
+		printf("%s", (char *)head->content);
+		tmp = tmp->next;
+	}
+	printf("\n%d\n", ft_lstsize(head));
 }*/

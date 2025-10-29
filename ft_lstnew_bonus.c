@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/27 14:18:34 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 08:09:04 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+t_list	*ft_lstnew(void *content)
 {
-	size_t	i;
+	t_list	*result;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	result = malloc(sizeof(t_list));
+	if (!result)
+		return (NULL);
+	result->content = content;
+	result->next = NULL;
+	return (result);
 }
 
 /*int main(void)
 {
-	printf("%zu", ft_strlen(NULL));
+	t_list	*node = ft_lstnew("Hello, world!");
+	printf("%s\n", (char *)node->content);
+	free(node);
+	return (0);
 }*/

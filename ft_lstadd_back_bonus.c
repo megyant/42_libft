@@ -1,28 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 11:30:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/29 08:08:51 by mbotelho         ###   ########.fr       */
+/*   Created: 2025/10/29 08:09:35 by mbotelho          #+#    #+#             */
+/*   Updated: 2025/10/29 08:40:52 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *str)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
+	t_list	*last;
 
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	if (!lst || !new)
+		return ;
+	last = ft_lstlast(*lst);
+	if (!last || *lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	last->next = new;
 }
 
 /*int main(void)
 {
-	printf("%zu", ft_strlen(NULL));
+	t_list	*head = ft_lstnew("Hello");
+	t_list	*n1 = ft_lstnew("world");
+	t_list **lst = &head;
+	ft_lstadd_back(NULL, n1);
+	t_list	*tmp = *lst;
+	while (tmp != NULL)
+	{
+		printf("%s\n", (char *)tmp->content);
+		tmp = tmp->next;
+	}
+	return (0);
 }*/
