@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:35:05 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/22 15:46:33 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/11/03 08:47:25 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
-	while (s[i])
+	while ((unsigned char)s[i])
 	{
 		if ((unsigned char)s[i] == (unsigned char)c)
 			return ((char *)&s[i]);

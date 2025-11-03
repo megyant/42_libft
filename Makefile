@@ -6,7 +6,7 @@
 #    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2025/10/29 14:23:27 by mbotelho         ###   ########.fr        #
+#    Updated: 2025/11/03 12:25:33 by mbotelho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,8 +46,9 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-bonus: $(BONUS_OBJS)
+bonus: $(OBJS) $(BONUS_OBJS)
 	ar rc $(NAME) $(BONUS_OBJS)
+	@touch bonus
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
