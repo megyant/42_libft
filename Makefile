@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+         #
+#    By: megyant <megyant@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/20 11:18:52 by mbotelho          #+#    #+#              #
-#    Updated: 2025/11/03 12:25:33 by mbotelho         ###   ########.fr        #
+#    Updated: 2025/11/05 11:14:09 by megyant          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,13 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 bonus: $(OBJS) $(BONUS_OBJS)
-	ar rc $(NAME) $(BONUS_OBJS)
+	ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 	@touch bonus
 
 clean:
 	$(RM) $(OBJS) $(BONUS_OBJS)
+	@touch bonus
+	@rm bonus
 
 fclean: clean
 	$(RM) $(NAME)

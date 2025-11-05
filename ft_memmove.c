@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/03 08:43:46 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/27 14:58:03 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*ptrs;
 	size_t				i;
 
-	if (!dest || !src)
+	if (!dest && !src)
 		return (NULL);
 	ptrd = (unsigned char *) dest;
 	ptrs = (const unsigned char *) src;
@@ -40,16 +40,36 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
 /*int main(void)
-{ 
-	printf("========Testing memmove========\n\n");
-	char str[] = "Hello";
-	size_t n = 10;
-	char dest[8] = "World";
+{
+	char	src[] = "lorem ipsum dolor sit amet";
+	char *dest = src + 1;
+	if (src != ft_memmove(src, dest, 8))
+        printf("dest's adress was not returned\n");
+    printf("%s", dest);
+}*/
 
-	printf("src: %s \n", str);
-	printf("dest: %s\n",dest);
-	ft_memmove(dest + 4, str, n);
-	printf("final dest: %s", dest);
+/*int	main(void)
+{ //ft_memset && ft_memmove
+    char src[10];
+    char dest[10];
+    int i = 0;
+
+    ft_memset(src, 'a', 10);
+    printf("Source:\n");
+    while (i < 10)
+    {
+        printf("%d ", src[i++]);
+    }
+    printf("\n");
+
+    ft_memmove(dest, src, 10);
+    i = 0;
+    printf("Dest:\n");
+    while (i < 10)
+    {
+        printf("%d ", dest[i]);
+        i++;
+    }
+    printf("\n");
 }*/

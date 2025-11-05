@@ -3,25 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
+/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 12:24:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/31 08:57:01 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/11/05 11:16:22 by megyant          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmeb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t			i;
 	unsigned char	*ptr;
 
-	ptr = (unsigned char *)malloc(nmeb * size);
+	if (nmemb == 0 || size == 0)
+		return (malloc(1));
+	if (nmemb > SIZE_MAX / size)
+	{
+		return (NULL);
+	}
+	ptr = (unsigned char *)malloc(nmemb * size);
 	i = -1;
 	if (!ptr)
 		return (NULL);
-	while (++i < (nmeb * size))
+	while (++i < (nmemb * size))
 	{
 		ptr[i] = 0;
 	}

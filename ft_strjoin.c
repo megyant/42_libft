@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:09 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/31 14:48:11 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/10/24 08:48:10 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 /*int main(void)
 {
 	printf("%s\n", ft_strjoin("Hello,", " world!"));
+	return(0);
+}*/
+
+/*int main(void)
+{
+	printf("%s\n", ft_strjoin(NULL, NULL));
 	return(0);
 }*/
