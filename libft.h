@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:24 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/05 11:05:36 by megyant          ###   ########.fr       */
+/*   Updated: 2025/11/04 11:44:39 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <string.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
 # include <stdio.h>
+# include <stdint.h>
 # include <limits.h>
 # include <fcntl.h>
 

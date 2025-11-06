@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megyant <megyant@student.42.fr>            +#+  +:+       +#+        */
+/*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 12:24:19 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/11/05 11:16:22 by megyant          ###   ########.fr       */
+/*   Updated: 2025/11/04 13:50:18 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,26 +34,15 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return ((void *)ptr);
 }
 
-/*int main(void)
+/* int	main(void)
 {
-	int a = 5;
-	char *ptro = (char *)calloc(a, sizeof(char));
-	char *ptr42 = (char *)ft_calloc(a, sizeof(char));
-	int i = -1;
-	int j = -1;
-	
-	if (ptro == NULL)
-	{
-		printf("Failed");
-		return (0);
-	}
-	printf("Original:\n");
-	while (++i < a)
-		printf("%d", ptro[i]);
-	printf("\nMine:\n");
-	while (++j < a)
-		printf("%d", ptr42[i]);
-	free(ptro);
-	free(ptr42);
-	return (0);
-}*/
+	size_t	nmemb = 20;
+	size_t	size = sizeof(char);
+	char	*space = (char *)ft_calloc(nmemb, size);
+
+	strncpy(space, "Hello, World!", nmemb - 1);
+	space[nmemb - 1] = '\0';
+	printf("%s\n", space);
+	free(space);
+	return(0);
+} */

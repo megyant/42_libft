@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 16:04:22 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/22 16:45:25 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/11/04 13:54:34 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strdup(const char *s)
 
 /*int main(void)
 {
-	const char *s = "a";
+	const char *s = "Hello, world";
 	char *dest1 = ft_strdup(s);
 	char *dest2 = strdup(s);
 

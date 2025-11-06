@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:30:14 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/22 08:48:56 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/11/04 14:20:23 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 { // ft_strlcpy and ft_strlcat
 	const char *src = "Hello world!";
 	char dst[4] = "amor";
-	printf("len copied: %zu | dst: %s", ft_strlcpy(dst, src, 4), dst);
+	printf("len copied: %zu | dst: %s", ft_strlcopy(dst, src, 4), dst);
 	return 0;
 }*/
