@@ -20,7 +20,7 @@
 
 ### Before Delivering
 - Have you checked norminette?
-- Do you have any files in your folder that are not supposed to be there? Careful with .vscode a.out libft.a...
+- Do you have any files in your folder that are not supposed to be there? Careful with .vscode, a.out, libft.a...
 - (if you work from home) Have you checked if your headers have your intra user
 - Does calloc have protections against nmemb = 0 && size = 0 and int overflow?
 - Do **all** of your 2nd part and bonus functions have protection against NULL? if (!s) return NULL/0/ ;
