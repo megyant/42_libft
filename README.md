@@ -27,7 +27,7 @@
   - e.g. when you run make or make bonus a 2nd time does it show up-to-date?
 - (Not mandatory but you may get someone picky) Have you protected your fds against -1 return?
 - Do you know all the basic concepts that you need to explain your functions?
-  - ex: size_t, *, void *, memory allocation, difference between memcpy and memmmove, size of a *, size of a char, size of an int, difference between unsigned char and signed char, why do you do cast to unsigned char in some of your functions, what are fds, what are lists...
+  - ex: size_t, *, void *, memory allocation, difference between memcpy and memmove, size of a *, size of a char, size of an int, difference between unsigned char and signed char, why do you do cast to unsigned char in some of your functions, what are fds, what are lists...
 
 ### IMPORTANT MESSAGE
 
