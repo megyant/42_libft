@@ -6,7 +6,7 @@
 /*   By: mbotelho <mbotelho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:48:00 by mbotelho          #+#    #+#             */
-/*   Updated: 2025/10/30 09:16:18 by mbotelho         ###   ########.fr       */
+/*   Updated: 2025/11/07 09:08:27 by mbotelho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ static int	word_count(char const *s, char c)
 
 	trigger = 0;
 	count = 0;
+	if (!s)
+		return (0);
 	while (*s)
 	{
 		if (*s != c && trigger == 0)
@@ -75,9 +77,11 @@ static char	*allocate_word(const char *s, char c)
 
 	len = 0;
 	i = 0;
+	if (!s)
+		return (0);
 	while (s[len] && !(s[len] == c))
 		len++;
-	word = malloc((len + 1) * sizeof (char));
+	word = malloc((len + 1) * sizeof(char));
 	if (!word)
 		return (NULL);
 	while (i < len)
@@ -100,11 +104,17 @@ static void	*freeing(char **strf, int size)
 /*int main(void)
 {
 	size_t i = 0;
-	char **strf = ft_split("ccHelloccWorldcc", 'c');
-	while(strf[i] != NULL)
+	char **strf = ft_split(NULL, 'c');
+	if (strf == NULL)
+	{
+		printf("ft_split returned NULL (as expected)\n");
+		return (0);
+	}
+	while(strf[i])
 	{
 		printf("%s\n", strf[i]);
 		i++;
 	}
+	free (strf);
 	return (0);
 }*/
