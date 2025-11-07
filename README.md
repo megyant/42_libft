@@ -1,6 +1,6 @@
 # 42_libft
 
-## Usefull tools
+### Useful tools
 - [Francinette](https://github.com/xicodomingues/francinette)
     - Great tool, does lot of tests but carefull because does not accout for all possible edge cases
 - [Libft Guide](https://42-cursus.gitbook.io/guide/0-rank-00/libft)
@@ -18,7 +18,7 @@
     - If a pop-up shows up the first time you use it click on update or change or smth along this lines and select 42 formater
 - Also I cannot recommend enough that you chat with your peers, specially the ones that have delivered the project (preferably not from your kick-off), they **will** know tricks and failing points that you don't, which is fine since we're all here to learn!
 
-## Before Delivering
+### Before Delivering
 - Have you checked norminette?
 - (if you work from home) Have you checked if your headers have your intra user
 - Does calloc have protections against nmemb = 0 + size = 0 and int overflow?
@@ -29,10 +29,10 @@
 - Do you know all the basic concepts that you need to explain your functions?
   - ex: size_t, *, void *, memory allocation, difference between memcpy and memmmove, size of a *, size of a char, size of an int, difference between unsigned char and signed char, why do you do cast to unsigned char in some of your functions, what are fds, what are lists...
 
-## IMPORTANT MESSAGE
+### IMPORTANT MESSAGE
 
 DO NOT COPY OR CHEAT, YOU WILL NOT BE HELPING YOURSELF. USE THIS ONLY TO GET THE LOGIC.
 
-## Others
+### Others
   
 Passed with 125 on 04/11
