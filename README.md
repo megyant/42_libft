@@ -16,15 +16,22 @@
     - Run pip3 install c_formatter_42 and pip3 install --user c_formatter_42 (one at a time) int the vscode terminal
     - Use crl + shft + i to use
     - If a pop-up shows up the first time you use it click on update or change or smth along this lines and select 42 formater
+- Also I cannot recommend enough that you chat with your peers, specially the ones that have delivered the project (preferably not from your kick-off), they **will** know tricks and failing points that you don't, which is fine since we're all here to learn!
 
 ## Before Delivering
 - Have you checked norminette?
 - (if you work from home) Have you checked if your headers have your intra user
 - Does calloc have protections agains nmemb = 0 + size = 0 and int overflow?
 - Do **all** of your 2nd part and bonus functions have protection against NULL? if (!s) return NULL/0/ ;
+- Is your makefile relinking
+  - e.g. when you run make or make bonus a 2nd time does it show up-to-date?
 - (Not mandatory but you may get someone picky) Have you protected your fds against -1 return?
 - Do you know all the basic concepts that you need to explain your functions?
   - ex: size_t, *, void *, memory allocation, difference between memcpy and memmmove, size of a *, size of a char, size of an int, difference between unsigned char and signed char, why do you do cast to unsigned char in some of your functions, what are fds, what are lists...
+
+## IMPORTANT MESSAGE
+
+DO NOT COPY OR CHEAT, YOU WILL NOT BE HELPING YOURSELF. USE THIS ONLY TO GET THE LOGIC.
 
 ## Others
   
