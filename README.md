@@ -21,9 +21,9 @@
 ## Before Delivering
 - Have you checked norminette?
 - (if you work from home) Have you checked if your headers have your intra user
-- Does calloc have protections agains nmemb = 0 + size = 0 and int overflow?
+- Does calloc have protections against nmemb = 0 + size = 0 and int overflow?
 - Do **all** of your 2nd part and bonus functions have protection against NULL? if (!s) return NULL/0/ ;
-- Is your makefile relinking
+- Is your makefile re-linking?
   - e.g. when you run make or make bonus a 2nd time does it show up-to-date?
 - (Not mandatory but you may get someone picky) Have you protected your fds against -1 return?
 - Do you know all the basic concepts that you need to explain your functions?
