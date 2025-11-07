@@ -4,7 +4,7 @@
 - [Francinette](https://github.com/xicodomingues/francinette)
     - Great tool, does lot of tests but carefull because does not accout for all possible edge cases
 - [Libft Guide](https://42-cursus.gitbook.io/guide/0-rank-00/libft)
-    - It has pseudocodes of some functions and some solutions, but carefull with them because some are not fully correct
+    - It has pseudocodes of some functions and some solutions, but careful with them because some are not fully correct (e.g. not protecting enough 2nd part functions) or there are better ways of doing it
 - [Oceno's channel](https://www.youtube.com/@onaecO)
   - He does some grat explaining of some of the functions (split) and some of the concepts
 - [Conceptual libft guide](https://www.gibbontech.com/ecole42/libft/index.html#key-concepts)
