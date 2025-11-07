@@ -78,7 +78,7 @@ static char	*allocate_word(const char *s, char c)
 	len = 0;
 	i = 0;
 	if (!s)
-		return (0);
+		return (NULL);
 	while (s[len] && !(s[len] == c))
 		len++;
 	word = malloc((len + 1) * sizeof(char));
