@@ -6,7 +6,7 @@
 - [Libft Guide](https://42-cursus.gitbook.io/guide/0-rank-00/libft)
     - It has pseudocodes of some functions and some solutions, but carefull with them because some are not fully correct
 - [Oceno's channel](https://www.youtube.com/@onaecO)
-  - He does some grat explaining of some of the functions (split) and concepts
+  - He does some grat explaining of some of the functions (split) and some of the concepts
 - [Conceptual libft guide](https://www.gibbontech.com/ecole42/libft/index.html#key-concepts)
   - Does a great listing of concepts you should have in mind while building the library and before delivering it
 - 42 C-format Vscode Extension
@@ -18,6 +18,13 @@
     - If a pop-up shows up the first time you use it click on update or change or smth along this lines and select 42 formater
 
 ## Before Delivering
+- Have you checked norminette?
+- (if you work from home) Have you checked if your headers have your intra user
+- Does calloc have protections agains nmemb = 0 + size = 0 and int overflow?
+- Do **all** of your 2nd part and bonus functions have protection against NULL? if (!s) return NULL/0/ ;
+- (Not mandatory but you may get someone picky) Have you protected your fds against -1 return?
+- Do you know all the basic concepts that you need to explain your functions?
+  - ex: size_t, *, void *, memory allocation, difference between memcpy and memmmove, size of a *, size of a char, size of an int, difference between unsigned char and signed char, why do you do cast to unsigned char in some of your functions, what are fds, what are lists...
 
 ## Others
   
