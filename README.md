@@ -109,10 +109,10 @@ Make sure you know what your code is doing and that none of the 2nd part and bey
 - Do you know all the basic concepts that you need to explain your functions?
   - ex: size_t, *, void *, memory allocation, difference between memcpy and memmove, size of a *, size of a char, size of an int, difference between unsigned char and signed char, why do you do cast to unsigned char in some of your functions, what are fds, what are lists...
 
-### IMPORTANT MESSAGE
+## IMPORTANT MESSAGE
 
 DO NOT COPY OR CHEAT, YOU WILL NOT BE HELPING YOURSELF. USE THIS ONLY TO GET THE LOGIC.
 
-### Others
+## Completion
   
-Passed with 125 on 04/11
+Finished on 04/11 with 125
