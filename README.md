@@ -1,5 +1,11 @@
-# 42_libft
+# Libft
 
+## About the project
+Libft is the first project developed during Common Core at 42 school. It consists of a library composed of several functions that will be necessary throughout 42 journey.  
+
+In the first part of this project I had to recreate several functions that are a part of C99 standard libc. Then I developed some additional functions that were not included in libc or were implemented in a different form. Finally, I jumped into the bonus part, where I had to learn some basic concepts of list manipulation.  
+
+## Tools and insights
 ### Useful tools
 - [Francinette](https://github.com/xicodomingues/francinette)
     - Great tool, does lot of tests but carefull because does not accout for all possible edge cases
@@ -20,6 +26,7 @@
 - Also I cannot recommend enough that you chat with your peers, specially the ones that have delivered the project (preferably not from your kick-off), they **will** know tricks and failing points that you don't, which is fine since we're all here to learn!
 
 ### Before Delivering
+Make sure you know what your code is doing and that none of the 2nd part and beyond functions are segfaulting. Here's a checklist to help you:  
 - Have you checked norminette?
 - Do you have any files in your folder that are not supposed to be there? Careful with .vscode, a.out, libft.a...
 - (if you work from home) Have you checked if your headers have your intra user
