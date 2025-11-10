@@ -10,27 +10,27 @@ In the first part of this project I had to recreate several functions that are a
 
 | Function    | Description                                        |
 |-------------|----------------------------------------------------|
-| ft_memset   | Sets the first n bytes of the memory area pointed to by s to the specified value. |
-| ft_bzero    | Sets the first n bytes of the memory area pointed to by s to zero. |
-| ft_memcpy   | Copies n bytes from memory area src to memory area dest. |
-| ft_memmove  | Copies n bytes from memory area src to memory area dest, handling overlap correctly. |
-| ft_memchr   | Locates the first occurrence of c in the first n bytes of the memory area pointed to by s. |
-| ft_memcmp   | Compares the first n bytes of memory areas s1 and s2. |
+| ft_isalpha  | Checks for an alphabetic character. |
+| ft_isdigit  | Checks for a digit (0-9). |
+| ft_isalnum  | Checks for an alphanumeric character. |
+| ft_isascii  | Checks for a 7-bit unsigned char that fits into the ASCII character. |
+| ft_isprint  | Checks for any printable character including space. |
 | ft_strlen   | Calculates the length of the string pointed to by s, excluding the terminating null byte. |
-| ft_strlcpy  | Copies up to size - 1 characters from the NULL-terminated string src to dst, NULL-terminating the result. |
-| ft_strlcat  | Appends the NULL-terminated string src to the end of dst. It will append at most size - strlen(dst) - 1 bytes, NULL-terminating the result. |
-| ft_strchr   | Locates the first occurrence of c in the string pointed to by s. |
-| ft_strrchr  | Locates the last occurrence of c in the string pointed to by s. |
-| ft_strnstr  | Locates the first occurrence of the NULL-terminated string needle in the string haystack, where not more than len characters are searched. |
+| ft_memset   | Fills the first n bytes of the memory area pointed to by s with the constant byte c. |
+| ft_bzero    | Erases the data in the n bytes of memory. |
+| ft_memcpy   | Copies n bytes from memory area src to memory area dest. |
+| ft_memmove  | Copies n bytes from memory area src to memory area dest. The memories may overlap. |
+| ft_strlcpy  | Copies characters from the NULL-terminated string src to dst, NULL-terminating the result. |
+| ft_strlcat  | Appends the NULL-terminated string src to the end of dst. It will append at most size - 1 bytes, NULL-terminating the result. |
+| ft_toupper  | Converts lowercase letters to uppercase. |
+| ft_tolower  | Converts uppercase letters to lowercase. |
+| ft_strchr   | Returns a pointer to the first occurrence of c in the string pointed to by s. |
+| ft_strrchr  | Returns a pointer to the last occurrence of c in the string pointed to by s. |
 | ft_strncmp  | Compares at most the first n bytes of two strings s1 and s2. |
-| ft_atoi     | Converts the initial portion of the string pointed to by str to int representation. |
-| ft_isalpha  | Checks if the character c is an alphabetic character (a-z or A-Z). |
-| ft_isdigit  | Checks if the character c is a decimal digit (0-9). |
-| ft_isalnum  | Checks if the character c is alphanumeric (a-z, A-Z, or 0-9). |
-| ft_isascii  | Checks if the character c is a 7-bit ASCII character. |
-| ft_isprint  | Checks if the character c is a printable character (including space). |
-| ft_toupper  | Converts the character c to uppercase. |
-| ft_tolower  | Converts the character c to lowercase. |
+| ft_memchr   | Scans the initial occurrence of c in the first n bytes of the memory area pointed to by s. |
+| ft_memcmp   | Compares the first n bytes of memory areas s1 and s2. |
+| ft_strnstr  | Locates the first occurrence of the NULL-terminated string big in the string little, where not more than len characters are searched. |
+| ft_atoi     | Converts the initial portion of the string pointed to by nptr to int. |
 | ft_calloc   | Allocates memory for an array of nmemb elements of size bytes each and initializes the memory to zero. |
 | ft_strdup   | Duplicates the string pointed to by src, including the terminating null byte, using malloc. |
 
@@ -42,9 +42,9 @@ In the first part of this project I had to recreate several functions that are a
 | ft_strjoin    | Returns a new string which is the result of concatenating s1 and s2.                             |
 | ft_strtrim    | Returns a copy of the string s1 with the characters of set at the beggining and end removed. |
 | ft_split      | Splits a string into an array of strings using a character c as a delimiter. |
-| ft_itoa       | Returns a string representing the integer recieved as an argument |
-| ft_strmapi    | Applies the function f to each character of the string passing its indext as the first argument and the character itself as the second. A new string is created to store the results |
-| ft_striteri   | Applies the function f to each character of the string passing its indext as the first argument |
+| ft_itoa       | Returns a string representing the integer recieved as an argument. |
+| ft_strmapi    | Applies the function f to each character of the string passing its indext as the first argument and the character itself as the second. A new string is created to store the results. |
+| ft_striteri   | Applies the function f to each character of the string passing its indext as the first argument. |
 | ft_putchar_fd | Outputs the character c to the specified file descriptor. |
 | ft_putstr_fd  | Outputs the string s to the specified file descriptor.    |
 | ft_putendl_fd | Outputs the string s to the specified file descriptor, followed by a newline. |
@@ -52,9 +52,7 @@ In the first part of this project I had to recreate several functions that are a
 
 ### Bonus Part
 
-These functions are bonus functions:
-
-these functions are using the following structure (linked list):
+The functions bellow are using the following liked list structure:
 
 ```c
 typedef struct s_list
@@ -74,8 +72,8 @@ typedef struct s_list
 | ft_lstadd_back  | Adds the new node at the end of the list.         |
 | ft_lstdelone    | Deletes and frees the given node using the del function.                 |
 | ft_lstclear     | Deletes and frees the given node and every successor of that element, using the function del and free(3). |
-| ft_lstiter      | Iterates the list lst and applies the function f to the content of each element. |
-| ft_lstmap       | Iterates the list lst and applies the function f to the content of each element. Creates a new list resulting of the successive applications of the function f. |
+| ft_lstiter      | Iterates the list lst and applies the function f to the node of each element. |
+| ft_lstmap       | Iterates the list lst and applies the function f to the nodeof each element. Creates a new list resulting of the successive applications of the function f. And deletes the content if necessary|
 
 ## Tools and insights
 ### Useful tools
