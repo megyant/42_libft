@@ -114,7 +114,7 @@ Make sure you know what your code is doing and that none of the 2nd part and bey
 
 ## IMPORTANT MESSAGE
 
-DO NOT COPY OR CHEAT, YOU WILL NOT BE HELPING YOURSELF. USE THIS ONLY TO GET THE LOGIC.
+DO NOT COPY OR CHEAT, YOU WILL NOT BE HELPING YOURSELF.
 
 ## Completion
   
