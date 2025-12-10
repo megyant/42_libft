@@ -1,11 +1,14 @@
 # Libft
 
-## About the project
+This project has been created as part of the 42 curriculum.
+
+## Description
 Libft is the first project developed during Common Core at 42 school. It consists of a library composed of several functions that will be necessary throughout 42 journey.  
 
-In the first part of this project I had to recreate several functions that are a part of C99 standard libc. Then I developed some additional functions that were not included in libc or were implemented in a different form. Finally, I jumped into the bonus part, where I had to learn some basic concepts of list manipulation.  
+In the first part of this project consisted in recreating several functions that are a part of C99 standard libc. Some additional function that were not a part of Libc were also completed. Finally, the bonus part of this project consisted of simple list manipulation.  
 
 ## Implemented functions
+Functions that can be found in this git repository.
 ### Part 1 - Libc Functions
 
 | Function    | Description                                        |
@@ -76,7 +79,7 @@ typedef struct s_list
 | ft_lstmap       | Iterates the list lst and applies the function f to the nodeof each element. Creates a new list resulting of the successive applications of the function f. And deletes the content if necessary|
 
 ## Tools and insights
-### Useful tools
+### Resources
 - [Francinette](https://github.com/xicodomingues/francinette)
     - Great tool, does lot of tests but carefull because does not accout for all possible edge cases
 - [Libft Guide](https://42-cursus.gitbook.io/guide/0-rank-00/libft)
