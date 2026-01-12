@@ -86,7 +86,7 @@ typedef struct s_list
     - It has pseudocodes of some functions and some solutions, but careful with them because some are not fully correct (e.g. not protecting enough 2nd part functions) or there are better ways of doing it
 - [Concepts' cheat sheet](https://github.com/agavrel/42_CheatSheet?tab=readme-ov-file#0x00--array-overflow)
 - [Oceno's channel](https://www.youtube.com/@onaecO)
-  - He does some grat explaining of some of the functions (split) and some of the concepts
+  - He does some great explaining of some of the functions (split) and some of the concepts
 - [Conceptual libft guide](https://www.gibbontech.com/ecole42/libft/index.html#key-concepts)
   - Does a great listing of concepts you should have in mind while building the library and before delivering it
 - 42 C-format Vscode Extension
