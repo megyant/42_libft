@@ -1,6 +1,6 @@
-# Libft
+*This project has been created as part of the 42 curriculum by mbotelho*
 
-This project has been created as part of the 42 curriculum.
+# Libft
 
 ## Description
 Libft is the first project developed during Common Core at 42 school. It consists of a library composed of several functions that will be necessary throughout 42 journey.  
